@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 import io
 import time
 
-def sleeptime(hour, min, sec):
-    return hour*3600 + min*60 + sec;
-
 def resort_url(resort_name):        #resort url
     return "https://www.liftopia.com" + str(resort_name)
 

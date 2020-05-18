@@ -15,7 +15,7 @@ soup = BeautifulSoup(nl_response.text, 'html.parser')
 for url in soup.findAll('a', {'class':'header--4 resort-row__resort-link'}):
     resort_link = rq.get(resort_url(url.get('href')))
     soup = BeautifulSoup(resort_link.text, 'html.parser')
-    if soup.select('h1', {'class':'resort-hero-area__header__name header--1'}) != []:
+    if soup.select('h1') != []:
         resort_name = soup.select('h1', {'class':'resort-hero-area__header__name header--1'})[0].text
         print(resort_name)
         fp.write('---' + resort_name + '---' + '\n')

@@ -17,6 +17,15 @@ firefoxBrowser.get(medium_url)
 firefoxBrowser.find_element_by_xpath("//a[@class='av aw ax ay az ba bb bc bd be bf bg bh bi bj bk']").click()   # Sing in page
 firefoxBrowser.find_element_by_link_text("Continue with Google").click()    # Sing in with Google account
 
+google_account = firefoxBrowser.find_element_by_id("identifierId")
+google_account.send_keys(user_name) # enter user account
+firefoxBrowser.find_element_by_xpath("//div[@id='identifierNext']").click()
+
+# NEED TO FIX: how to send pwd to a hidden input box
+google_password = firefoxBrowser.find_element_by_xpath("input[@name='password']")
+google_password.send_keys(user_pwd)
+
+firefoxBrowser.find_element_by_xpath("//div[@id='passwordNext']").click()
 time.sleep(10)
 firefoxBrowser.close()
 

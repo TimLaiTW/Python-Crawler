@@ -12,7 +12,10 @@ user_pwd = "user_pwd"
 firefoxDriverPath = "/Users/dev/Documents/SeleniumDriver/geckodriver"
 firefoxBrowser = webdriver.Firefox(executable_path = firefoxDriverPath)
 firefoxBrowser.get(medium_url)
-sign_in_page = firefoxBrowser.find_element_by_xpath("//a[@class='av aw ax ay az ba bb bc bd be bf bg bh bi bj bk']").click()
+
+# different commands to find href and entering it
+firefoxBrowser.find_element_by_xpath("//a[@class='av aw ax ay az ba bb bc bd be bf bg bh bi bj bk']").click()   # Sing in page
+firefoxBrowser.find_element_by_link_text("Continue with Google").click()    # Sing in with Google account
 
 time.sleep(10)
 firefoxBrowser.close()

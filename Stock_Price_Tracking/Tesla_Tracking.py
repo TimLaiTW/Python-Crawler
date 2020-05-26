@@ -21,8 +21,8 @@ def send_mail(title, price):
     print('Hey mail has been sent!')
     server.close()
 
-Stock_URL = 'https://finance.yahoo.com/quote/tsla?ltr=1'
-page = requests.get(Stock_URL)
+stock_URL = 'https://finance.yahoo.com/quote/tsla?ltr=1'
+page = requests.get(stock_URL)
 soup = BeautifulSoup(page.text, 'html.parser')
 
 title = soup.find('h1', {'class':'D(ib) Fz(16px) Lh(18px)'}).get_text()

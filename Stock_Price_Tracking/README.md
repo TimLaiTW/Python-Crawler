@@ -19,5 +19,5 @@ def send_mail(title, price):
     server.ehlo()
     server.login(user_account, user_password)
     server.sendmail(user_account, receiver_account, msg)
-    server.close(
+    server.close()
 ```

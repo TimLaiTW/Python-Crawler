@@ -1,6 +1,6 @@
 # Python-Crawler
 
-#### [All trail levels amount of ski resorts at New England area](https://github.com/TimLaiTW/Python-Crawler/tree/master/Ski_Resort_Level_Count)
+#### [Trails infomation of different ski resorts at New England area](https://github.com/TimLaiTW/Python-Crawler/tree/master/Ski_Resort_Level_Count)
 Some basic commands in BeautifulSoup, requests and io. 
 
 #### [Stock Price Tracking](https://github.com/TimLaiTW/Python-Crawler/tree/master/Stock_Price_Tracking)
